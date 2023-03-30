@@ -19,16 +19,16 @@
   register: login
 
 
-- name: ASMS traffic change request
+- name: ASMS object change request
   uri:
-    url: https://{{ asms_server }}/FireFlow/api/change-requests/traffic
+    url: https://{{ asms_server }}/FireFlow/api/request/object
     validate_certs: no
     method: POST
     headers:
       Cookie: "{{ login.set_cookie }}"
     body_format: json
     body:
-      '{{ asms_change_request }}'
+      '{{ asms_change_object_request }}'
   register: results
 
 - name: Print CR

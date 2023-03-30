@@ -1,6 +1,6 @@
 ---
 # tasks file for aff
-- name: Checking ASMS server availablility
+- name: Checking ASMS server availability
   uri:
     url: https://{{ asms_server }}/algosec/suite/login.html
     validate_certs: no

@@ -1,0 +1,16 @@
+---
+- name: ASMS Create change request
+  hosts: localhost
+  gather_facts: no
+
+  pre_tasks:
+    - name: ASMS load credential vars (vault capable)
+      include_vars:
+        file: asms-credential.yml
+
+    - name: ASMS load object change definition
+      include_vars:
+        file: asms-change-for-object-data.yml
+
+  roles:
+    - asms-change-for-object

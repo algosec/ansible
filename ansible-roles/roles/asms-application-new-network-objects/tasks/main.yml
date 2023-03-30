@@ -1,6 +1,6 @@
 ---
 # tasks file for AppViz REST API
-- name: ASMS server availablility check
+- name: ASMS server availability check
   uri:
     url: https://{{ asms_server }}/algosec/suite/login.html
     validate_certs: no

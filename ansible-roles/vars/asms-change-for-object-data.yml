@@ -1,0 +1,16 @@
+---
+asms_change_object_request:
+  template: "135: Object Change Multi Device Request"
+  fields:
+  subject: "Ansible object change request subject"
+  description: "Ansible object change request description"
+  devices:
+  - "192_168_10_1"
+  requestedActions:
+  - action: create
+    name: "Raspberry_120"
+    type: network
+    isGroup: false
+    values:
+    - "192.168.10.120"
+  objectContainerLevel: Automatic
